@@ -3,6 +3,14 @@
   "packageManager": "yarn@3.0.0",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "probot": "^12.1.0"
+    "js-yaml": "^4.1.0",
+    "probot": "^12.1.0",
+    "probot-config": "^1.1.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "scripts": {
+    "start": "node ./app.js",
+    "dev": "./scripts/todo.sh"
   }
 }
