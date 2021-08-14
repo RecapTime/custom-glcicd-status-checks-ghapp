@@ -1,0 +1,7 @@
+{
+  "name": "custom-glcicd-status-checks-ghapp",
+  "packageManager": "yarn@3.0.0",
+  "dependencies": {
+    "probot": "^12.1.0"
+  }
+}
