@@ -1,0 +1,25 @@
+stages:
+  - test
+  - build
+  - deploy
+
+.build-container-image:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  before_script:
+    - apk add bash coreutils
+    # TODO: Add login sutff for GitLab Dependency Proxy
+    - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker login -u RecapTimeBot -p $GITHUB_TOKEN ghcr.io
+  script:
+    - chmod +x ./scripts/build-image.sh && ./scripts/build-image.sh
+
+.deploy-app:
+  stage: deploy
+  image: node:14
+  before_script:
+    - ./scripts/railway-cli-login.sh $RAILWAYAPP_JWT_KEY
+  script:
+    - yarn && yarn railway:deploy
