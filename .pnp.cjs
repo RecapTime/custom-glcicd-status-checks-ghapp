@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["dotenv", "npm:10.0.0"],
             ["probot", "npm:12.1.0"]
           ],
           "linkType": "SOFT",
@@ -1207,6 +1208,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["custom-glcicd-status-checks-ghapp", "workspace:."],
+            ["dotenv", "npm:10.0.0"],
             ["probot", "npm:12.1.0"]
           ],
           "linkType": "SOFT",
@@ -1345,6 +1347,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["dotenv", [
+        ["npm:10.0.0", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-10.0.0-36b272df25-f412c5fe8c.zip/node_modules/dotenv/",
+          "packageDependencies": [
+            ["dotenv", "npm:10.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:8.6.0", {
           "packageLocation": "./.yarn/cache/dotenv-npm-8.6.0-2ce3e9f7bb-38e902c80b.zip/node_modules/dotenv/",
           "packageDependencies": [

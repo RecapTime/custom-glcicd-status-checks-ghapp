@@ -2,6 +2,7 @@
   "name": "custom-glcicd-status-checks-ghapp",
   "packageManager": "yarn@3.0.0",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "probot": "^12.1.0"
   }
 }
